@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Samy KADRI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Fond étoilé */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #000030, #000000);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Étoiles animées */
+        .stars {
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            border-radius: 50%;
+            animation: starTwinkle 2s infinite alternate;
+        }
+
+        .starfield {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Animation de la fusée */
+        .rocket {
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 100px;
+            transition: transform 2s ease-in-out;
+            z-index: 1;
+        }
+
+        /* Contenu du site */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(0, 0, 50, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 50, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.5em;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.2);
+            color: #fff;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            margin-top: 20px;
+            animation: hologramOpen 0.5s forwards;
+            border: 2px solid orange;
+            background: rgba(0, 0, 128, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes hologramOpen {
+            0% { opacity: 0; transform: scale(0) translateZ(-50px); }
+            100% { opacity: 1; transform: scale(1) translateZ(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fond étoilé rempli -->
+    <div class="starfield">
+        <!-- Plus d'étoiles ajoutées -->
+        <div class="stars" style="top: 5%; left: 10%;"></div>
+        <div class="stars" style="top: 8%; left: 20%;"></div>
+        <div class="stars" style="top: 12%; left: 70%;"></div>
+        <div class="stars" style="top: 15%; left: 30%;"></div>
+        <div class="stars" style="top: 18%; left: 50%;"></div>
+        <div class="stars" style="top: 25%; left: 15%;"></div>
+        <div class="stars" style="top: 28%; left: 60%;"></div>
+        <div class="stars" style="top: 35%; left: 40%;"></div>
+        <div class="stars" style="top: 38%; left: 75%;"></div>
+        <div class="stars" style="top: 45%; left: 10%;"></div>
+        <div class="stars" style="top: 50%; left: 25%;"></div>
+        <div class="stars" style="top: 55%; left: 70%;"></div>
+        <div class="stars" style="top: 60%; left: 80%;"></div>
+        <div class="stars" style="top: 65%; left: 35%;"></div>
+        <div class="stars" style="top: 70%; left: 15%;"></div>
+        <div class="stars" style="top: 75%; left: 60%;"></div>
+        <div class="stars" style="top: 80%; left: 45%;"></div>
+        <div class="stars" style="top: 85%; left: 20%;"></div>
+        <div class="stars" style="top: 90%; left: 75%;"></div>
+        <div class="stars" style="top: 95%; left: 50%;"></div>
+    </div>
+
+    <!-- Animation de la fusée -->
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/rocket--v1.png" class="rocket" id="rocket" alt="Rocket">
+
+    <div class="container">
+        <header>
+            <h1>CV Samy KADRI</h1>
+            <nav>
+                <a href="#" onclick="showSection('profil')">Profil</a>
+                <a href="#" onclick="showSection('experiences')">Expériences</a>
+                <a href="#" onclick="showSection('formations')">Formations</a>
+                <a href="#" onclick="showSection('competences')">Compétences</a>
+            </nav>
+        </header>
+
+        <section class="section" id="profil">
+            <h2>Profil</h2>
+            <p>Étudiant en BTS SIO en alternance OPTION SLAM motivé.</p>
+        </section>
+
+        <section class="section" id="experiences">
+            <h2>Expériences professionnelles</h2>
+            <ul>
+                <li><strong>Alternant informatique</strong> - Corona Étanchéité (Depuis Septembre 2024)</li>
+            </ul>
+        </section>
+
+        <section class="section" id="formations">
+            <h2>Formations</h2>
+            <ul>
+                <li><strong>Bac général</strong> - Lycée Claude Lebois à Saint-Chamond (Mention Assez Bien)</li>
+                <li><strong>L1 Informatique</strong> - Université Jean Monnet à Saint-Étienne</li>
+                <li><strong>BTS SIO SLAM</strong> - CFAI de Saint-Étienne</li>
+            </ul>
+        </section>
+
+        <section class="section" id="competences">
+            <h2>Compétences</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>C#, Python</li>
+                <li>PostgreSQL, MySQL</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Masquer toutes les sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Afficher la section cliquée
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+
+            // Animation de la fusée
+            const rocket = document.getElementById('rocket');
+            rocket.style.transform = 'translate(1200px, -800px)';
+            setTimeout(() => {
+                rocket.style.transform = 'translate(-100px, 100px)';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
